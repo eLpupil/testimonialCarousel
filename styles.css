@@ -1,13 +1,6 @@
-.attribution {
-    font-size: 11px;
-    text-align: center;
-}
-
-.attribution a {
-    color: hsl(228, 45%, 44%);
-}
 
 #whole-page {
+    height: 100vh;
     max-width: 1440px;
     max-height: 810px;
     margin: auto;
@@ -17,10 +10,11 @@
 .slide {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    background-color: #ffffff;
 }
 
 .slide-text-col {
-    grid-col: 1;
+    grid-column: 1;
     background-image: url("images/pattern-curve.svg"), url("images/pattern-quotes.svg");
     background-repeat: no-repeat, no-repeat;
     background-position-x: left, 52%;
@@ -53,7 +47,7 @@
 }
 
 .slide-image-col {
-    grid-col: 2;
+    grid-column: 2;
     background-image: url("images/pattern-bg.svg");
     background-repeat: no-repeat;
     background-position-y: center;
@@ -65,7 +59,7 @@
     width: 100%;
 }
 
-.btn-container {
+.carousel__btn-container {
     display: flex;
     flex-direction: row;
     position: absolute;
@@ -73,7 +67,7 @@
     left: 20%;
 }
 
-.btn {
+.carousel__btn {
     display: block;
     background-color: #ffffff;
     border-style: none;
@@ -87,4 +81,38 @@
 
 .next {
     border-radius: 0 100% 100% 0;
+}
+
+
+.carousel {
+    width: 100%;
+}
+
+.carousel__track {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel__slide {
+    /* visibility: hidden; */
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+}
+
+.current-slide {
+    /* visibility: visible; */
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }
